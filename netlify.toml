@@ -1,0 +1,10 @@
+[build]
+# base = "blackjack-angular"
+  command = "ng build"
+  publish = "dist/blackjack-angular/browser"
+
+  [[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+

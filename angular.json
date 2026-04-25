@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "jackblack-angular": {
+    "blackjack-angular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -54,10 +54,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "jackblack-angular:build:production"
+              "buildTarget": "blackjack-angular:build:production"
             },
             "development": {
-              "buildTarget": "jackblack-angular:build:development"
+              "buildTarget": "blackjack-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
