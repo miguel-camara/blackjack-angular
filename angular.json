@@ -51,6 +51,9 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          "options": {
+            "port": 4002
+          },
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
