@@ -1,0 +1,14 @@
+<div class="toast">
+  <div
+    class="alert"
+    [class]="{
+      'alert-info': computer() && player(),
+      'alert-error': computer(),
+      'alert-success': player(),
+    }"
+  >
+    <span class="text-xl">
+      {{ message() }}
+    </span>
+  </div>
+</div>

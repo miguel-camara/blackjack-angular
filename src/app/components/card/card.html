@@ -1,0 +1,7 @@
+<div
+  [class.-mx-10]="!isToggle() && index() !== 0"
+  [class.mx-0]="index() === 0"
+  class="flex-initial w-35 h-45 hover:scale-103 transition-transform duration-200 mb-1"
+>
+  <img [src]="`assets/${card()}.png`" [alt]="card()" />
+</div>
