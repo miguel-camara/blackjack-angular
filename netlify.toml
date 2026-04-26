@@ -1,6 +1,6 @@
 [build]
 # base = "blackjack-angular"
-  command = "ng build"
+  command = "ng build --configuration=production"
   publish = "dist/blackjack-angular/browser"
 
 [[redirects]]
