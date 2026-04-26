@@ -3,8 +3,7 @@
   command = "ng build"
   publish = "dist/blackjack-angular/browser"
 
-  [[redirects]]
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
