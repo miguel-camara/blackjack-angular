@@ -1,5 +1,5 @@
 <div class="flex justify-center w-full bg-green-950">
-  <div class="flex flex-col my-2 sm:w-2xl md:w-3xl lg:w-4xl px-8 pt-6 pb-4">
+  <div class="flex flex-col my-2 w-2xl sm:w-4xl px-8 py-6">
     <div class="flex flex-wrap justify-center gap-5">
       <button
         class="btn bg-green-900 rounded-lg hover:scale-103 transition-transform duration-200"
@@ -40,18 +40,22 @@
         Detener
       </button>
     </div>
+    <div class="divider -mb-3"></div>
     @for (play of players(); track play.name) {
       <div class="flex justify-center my-5">
-        <strong class="text-2xl">{{ play.name }}:</strong>
-        <span class="text-2xl italic ml-1"> {{ play.score }} </span>
+        <span class="text-2xl font-bold">{{ play.name }}:&nbsp;</span>
+        <span class="text-2xl italic"> {{ play.score }} </span>
       </div>
       <div
-        class="flex flex-wrap w-full px-5 mb-5"
-        [class.justify-around]="isToggle()"
+        class="flex flex-wrap h-full space-y-8 mb-5"
+        [class]="{
+          'justify-around': isToggle(),
+          'justify-center': !isToggle(),
+        }"
         (click)="isToggle.set(!isToggle())"
       >
         @for (item of play.cards; track $index; let i = $index) {
-          <card-component [index]="i" [card]="item" [isToggle]="isToggle()" />
+          <card-component [card]="item" [isToggle]="isToggle()" />
         }
       </div>
     }

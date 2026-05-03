@@ -7,5 +7,5 @@ import { Component, computed, input, signal } from '@angular/core';
 export class Card {
   isToggle = input.required<boolean>();
   card = input.required<string>();
-  index = input.required<number>();
+
 }
